@@ -1,0 +1,32 @@
+@startuml
+object "Предок\n(Ссавці)" as Ancestor {
+    +назва: String = "Предок"
+    +характеристики: String = "Ссавці, яйцекладні"
+}
+
+object "Мавпи" as Monkeys {
+    +назва: String = "Мавпи"
+    +характеристики: String = "Соціальні тварини"
+}
+
+object "Люди" as Humans {
+    +назва: String = "Люди"
+    +характеристики: String = "Розумні, користуються мовою"
+}
+
+object "Слон" as Elephant {
+    +назва: String = "Слон"
+    +характеристики: String = "Великий, має довгий хобот"
+}
+
+object "Кити" as Whales {
+    +назва: String = "Кити"
+    +характеристики: String = "Морські, дихають через дихальну трубку"
+}
+
+Ancestor -- Monkeys : "еволюція"
+Ancestor -- Humans : "еволюція"
+Ancestor -- Elephant : "еволюція"
+Ancestor -- Whales : "еволюція"
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+actor Computer
+participant Сервер
+
+Computer -> Сервер : Надіслати Email
+Сервер --> Computer : Підтвердження відправлення
+
+Computer -> Сервер : Перевірка нових Email
+alt Новий Email є
+    Сервер --> Computer : Новий Email
+else Нових Email немає
+    Сервер --> Computer : Немає нових повідомлень
+end
+
+Computer -> Сервер : Вивантажити Email
+Сервер --> Computer : Вивантажено Email
+
+Computer -> Сервер : Видалити старі Email
+Сервер --> Computer : Підтвердження видалення
+
+Computer -> Сервер : Відповідь на Email
+Сервер --> Computer : Підтвердження відправлення відповіді
+
+Computer -> Сервер : Відмінити Email (не відправлено)
+Сервер --> Computer : Підтвердження відміни
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+node "Клієнт\n(локальний комп'ютер)" as client {
+    [Клієнтське ПЗ] 
+}
+
+node "Сервер" as server {
+    [Серверне ПЗ]
+}
+
+node "База даних" as database {
+    [СУБД]
+}
+
+client -> server : Запит
+server -> database : Запит до БД
+database --> server : Відповідь
+server --> client : Відповідь
+
+@enduml
